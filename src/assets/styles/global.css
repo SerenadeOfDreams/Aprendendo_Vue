@@ -3,15 +3,82 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --layout-content-padding: 25px;
+
+  /* VARIÁVEIS DE COR PADRÃO */
+  --bg-primary: var(--bg-light-primary);
+  --bg-secondary: var(--bg-light-secondary);
+  --bg-highlight-1: var(--bg-light-highlight-1);
+  --bg-highlight-2: var(--bg-light-highlight-2);
+  --fg-primary: var(--fg-light-primary);
+  --fg-secondary: var(--fg-light-secondary);
+  --fg-highlight-1: var(--fg-light-highlight-1);
+  --fg-highlight-2: var(--fg-light-highlight-2);
+  --fg-hover: var(--fg-light-hover);
+  --border: var(--border-light);
+  --border2: var(--border-light2);
+  --border3: var(--border-light3);
+  --button-custom: var(--button-custom-light-theme);
+  --button-custom-hover: var(--button-custom-light-theme-hover);
+  /* --button-success-padrao: var(--button-success-2); */
+  /* ----------------------------- */
+
+  /* ESQUEMA DE CORES PARA O TEMA CLARO */
+  --bg-light-primary: #f8f8f8;
+  --bg-light-secondary: #d9d9d9;
+  --bg-light-highlight-1: #fbff3d;
+  --bg-light-highlight-2: #dde03f;
+  --fg-light-primary: #000000;
+  --fg-light-secondary: #d9d9d9;
+  --fg-light-highlight-1: #ff3d99;
+  --fg-light-highlight-2: #ff3d99;
+  --fg-light-hover: #3dffa3;
+  --border-light: #fbff;
+  --border-light2: #00e5ff;
+  --border-light3: #3dffa3;
+  /* --border-light: #e0e0e0; */
+  --button-custom-light-theme: #ff3d99;
+  --button-custom-light-theme-hover: #f565a8;
+  /* --button-custom-light-theme-hover: #fbff3d; */
+  --button-danger-hover2-light: #ffdedd;
+  /* ------------------------------- */
+
+  /* ESQUEMA DE CORES PARA O TEMA ESCURO */
+  --bg-dark-primary: #191919;
+  --bg-dark-secondary: #202020;
+  --bg-dark-highlight-1: #fbff3d;
+  --bg-dark-highlight-2: #dde03f;
+  --fg-dark-primary: #cdcdcd;
+  --fg-dark-secondary: #d9d9d9;
+  --fg-dark-highlight-1: #ff3d99;
+  --fg-dark-highlight-2: #ff3d99;
+  --fg-dark-hover: #3dffa3;
+  --border-dark: #53535381;
+  --button-custom-dark-theme: #ff3d99;
+  --button-custom-dark-theme-hover: #f565a8;
+  /* --button-custom-dark-theme-hover: #fbff3d; */
+  --button-danger-hover2-dark: #472726;
+  /* ------------------------------- */
+
+  /* ESQUEMA DE CORES PARA BOTÃO */
+  --button-success: #4ade80;
+  --button-success-2: #008000;
+  --button-success-hover: #44a065;
+  --button-danger: #f25f5c;
+  --button-danger-hover: #ca4f4d;
+  --button-danger-hover2: var(--button-danger-hover2-light);
+  --button-warning: #ffe066;
+  --button-edit: #247ba0;
+  --button-edit-hover: #1e6786;
+  --button-fg: #ffffff;
+  --button-fg-hover: #cacaca;
+  /* --button-custom-2: #8639af;
+  --button-custom-2-hover: #672c86; */
+  /* ------------------------------- */
 }
 
 a {
@@ -38,28 +105,36 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  /* font-family: inherit; */
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  /* background: var(--fg-hover); */
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--fg-highlight-1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--fg-highlight-2);
 }
