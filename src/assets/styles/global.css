@@ -24,7 +24,7 @@
   --border3: var(--border-light3);
   --button-custom: var(--button-custom-light-theme);
   --button-custom-hover: var(--button-custom-light-theme-hover);
-  /* --button-success-padrao: var(--button-success-2); */
+  --button-success-padrao: var(--button-success-2);
   /* ----------------------------- */
 
   /* ESQUEMA DE CORES PARA O TEMA CLARO */
@@ -72,8 +72,8 @@
   --button-danger-hover: #ca4f4d;
   --button-danger-hover2: var(--button-danger-hover2-light);
   --button-warning: #ffe066;
-  --button-edit: #247ba0;
-  --button-edit-hover: #1e6786;
+  --button-edit: #42d892;
+  --button-edit-hover: #3dffa3;
   --button-fg: #ffffff;
   --button-fg-hover: #cacaca;
   --button-custom-2: #5451fd;
