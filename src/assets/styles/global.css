@@ -79,6 +79,33 @@
   --button-custom-2: #413dff;
   --button-custom-2-hover: #5451fd;
   /* ------------------------------- */
+
+  /* ESQUEMA DE CORES PARA MESSAGE*/
+  /* outlined */
+  /* texto */
+  --message-success-outlined-color: #16a34a;
+  --message-info-outlined-color: #2563eb;
+  --message-warn-outlined-color: #ca8a04;
+  --message-error-outlined-color: #dc2626;
+  --message-secondary-outlined-color: #64748b;
+  /* ------------------------------------------------- */
+
+  /* borda */
+  --message-success-outlined-border-color: #16a34a;
+  --message-info-outlined-border-color: #2563eb;
+  --message-warn-outlined-border-color: #ca8a04;
+  --message-error-outlined-border-color: #dc2626;
+  --message-secondary-outlined-border-color: #64748b;
+  /* -------------------------------------------------- */
+  /* ------------------------------------------------- */
+
+  /* simple */
+  /* texto */
+  --message-success-simple-color: #16a34a;
+  --message-info-simple-color: #2563eb;
+  --message-warn-simple-color: #ca8a04;
+  --message-error-simple-color: #dc2626;
+  --message-secondary-simple-color: #64748b;
 }
 
 a {
