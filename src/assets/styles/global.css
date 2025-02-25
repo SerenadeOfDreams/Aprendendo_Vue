@@ -23,9 +23,7 @@
   --border2: var(--border-light2);
   --border3: var(--border-light3);
   --border4: var(--border-light4);
-  --button-custom: var(--button-custom-light-theme);
-  --button-custom-hover: var(--button-custom-light-theme-hover);
-  --button-success-padrao: var(--button-success-2);
+
   /* ----------------------------- */
 
   /* ESQUEMA DE CORES PARA O TEMA CLARO */
@@ -41,10 +39,11 @@
   --border-light: #fbff;
   --border-light2: #00e5ff;
   --border-light3: #3dffa3;
-  --border-light4: #fbff3d;
+  --border-light4: #fbff00;
+  --teste: #12d9ef;
   /* --border-light: #e0e0e0; */
-  --button-custom-light-theme: #ff3d99;
-  --button-custom-light-theme-hover: #f565a8;
+  --button-primary-fill-light-theme: #ff3d99;
+  --button-primary-fill-light-theme-hover: #f565a8;
   /* --button-custom-light-theme-hover: #fbff3d; */
   --button-danger-hover2-light: #ffdedd;
   /* ------------------------------- */
@@ -60,13 +59,14 @@
   --fg-dark-highlight-2: #ff3d99;
   --fg-dark-hover: #3dffa3;
   --border-dark: #53535381;
-  --button-custom-dark-theme: #ff3d99;
-  --button-custom-dark-theme-hover: #f565a8;
+  --button-primary-fill-dark-theme: #ff3d99;
+  --button-primary-fill-dark-theme-hover: #f565a8;
   /* --button-custom-dark-theme-hover: #fbff3d; */
   --button-danger-hover2-dark: #472726;
   /* ------------------------------- */
 
   /* ESQUEMA DE CORES PARA BOTÃO */
+  --button-success-padrao: var(--button-success-2);
   --button-success: #4ade80;
   --button-success-2: #008000;
   --button-success-hover: #44a065;
@@ -78,8 +78,22 @@
   --button-edit-hover: #3dffa3;
   --button-fg: #ffffff;
   --button-fg-hover: #cacaca;
-  --button-custom-2: #413dff;
-  --button-custom-2-hover: #5451fd;
+  --button-primary-fill: var(--button-primary-fill-light-theme);
+  --button-primary-fill-hover: var(--button-primary-fill-light-theme-hover);
+  --button-primary-border: #ff3d99;
+  --button-primary-border-fg: #ff3d99;
+  --button-primary-border-hover: #f565a8;
+  --button-primary-border-fg-hover: #f565a8;
+  --button-primary-none: #ff3d99;
+  --button-primary-none-hover: #f565a8;
+  --button-secondary-fill: #413dff;
+  --button-secondary-fill-hover: #5451fd;
+  --button-secondary-border: #413dff;
+  --button-secondary-border-hover: #5451fd;
+  --button-secondary-border-fg: #413dff;
+  --button-secondary-border-fg-hover: #5451fd;
+  --button-secondary-none: #413dff;
+  --button-secondary-none-hover: #5451fd;
   /* ------------------------------- */
 
   /* ESQUEMA DE CORES PARA MESSAGE*/
