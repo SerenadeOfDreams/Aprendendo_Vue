@@ -56,67 +56,67 @@ function handleClick(event: MouseEvent) {
 
 /* #region Primary */
 .primary.fill {
-  background-color: var(--button-custom);
+  background-color: var(--button-primary-fill);
   transition: background-color var(--theme-transition-time);
 }
 .primary.fill:hover {
-  background-color: var(--button-custom-hover);
+  background-color: var(--button-primary-fill-hover);
 }
 .primary.border {
   border: solid;
-  color: var(--button-custom);
-  border-color: var(--button-custom);
+  color: var(--button-primary-border-fg);
+  border-color: var(--button-primary-border);
   background: none;
   transition-property: border-color, color;
   transition-duration: var(--theme-transition-time);
 }
 .primary.border:hover {
   border: solid;
-  color: var(--button-custom);
-  border-color: var(--button-custom-hover);
+  color: var(--button-primary-border-fg-hover);
+  border-color: var(--button-primary-border-hover);
   background-color: var(--bg-secondary);
 }
 .primary.none {
   background: none;
-  color: var(--button-custom);
+  color: var(--button-primary-none);
   transition: color var(--theme-transition-time);
 }
 .primary.none:hover {
   background-color: var(--bg-secondary);
-  color: var(--button-custom-hover);
+  color: var(--button-primary-none-hover);
 }
 /* #endregion */
 
 /* #region Secondary */
 .secondary.fill {
-  background-color: var(--button-custom-2);
+  background-color: var(--button-secondary-fill);
   transition: background-color var(--theme-transition-time);
 }
 .secondary.fill:hover {
-  background-color: var(--button-custom-2-hover);
+  background-color: var(--button-secondary-fill-hover);
 }
 .secondary.border {
   border: solid;
-  color: var(--button-custom-2);
-  border-color: var(--button-custom-2);
+  color: var(--button-secondary-border-fg);
+  border-color: var(--button-secondary-border);
   background: none;
   transition-property: border-color, color;
   transition-duration: var(--theme-transition-time);
 }
 .secondary.border:hover {
   border: solid;
-  color: var(--button-custom-2);
-  border-color: var(--button-custom-2-hover);
+  color: var(--button-secondary-border-fg-hover);
+  border-color: var(--button-secondary-border-hover);
   background-color: var(--bg-secondary);
 }
 .secondary.none {
   background: none;
-  color: var(--button-custom-2);
+  color: var(--button-secondary-none);
   transition: color var(--theme-transition-time);
 }
 .secondary.none:hover {
   background-color: var(--bg-secondary);
-  color: var(--button-custom-2-hover);
+  color: var(--button-secondary-none-hover);
 }
 /* #endregion */
 
