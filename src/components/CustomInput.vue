@@ -61,6 +61,7 @@ label {
 .p-inputtext {
   width: 100%;
   height: 38px;
+  border-width: 2px;
   --p-inputtext-color: var(--fg-primary);
   --p-inputtext-padding-x: 5px;
   --p-inputtext-background: var(--bg-primary);
