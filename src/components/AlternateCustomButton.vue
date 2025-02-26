@@ -2,24 +2,35 @@
 import { computed, ref, watch } from "vue";
 
 const props = defineProps<{
-  variant: "fill" | "border" | "none";
   type: string;
+  default: "primary" | "secondary";
+  variant: "fill" | "border" | "none";
 }>();
 
-const defaultColors = {
+const defaultColorsPrimary = {
   fill: "var(--button-primary-fill)",
   border: "var(--button-primary-border)",
   none: "var(--button-primary-none)",
+};
+
+const defaultColorsSecondary = {
+  fill: "var(--button-secondary-fill)",
+  border: "var(--button-secondary-border)",
+  none: "var(--button-secondary-none)",
 };
 const alternateColors = ref([
   "var(--border2)",
   "var(--border3)",
   "var(--border4)",
 ]);
+
 const noneHoverBackground = ref("transparent");
 
 const alternateColorsIndex = ref(0);
-const currentColor = ref(defaultColors[props.variant || "none"]);
+
+const currentColor = ref();
+
+// const initialColors = ref(currentColor.value);
 
 watch(
   () => props.variant,
@@ -28,9 +39,21 @@ watch(
       alternateColors.value[1] = "#4ade80";
       alternateColors.value[0] = "#12d9ef";
     }
-    // else {
-    //   alternateColors.value[1] = "var(--border4)";
-    // }
+  },
+  { immediate: true }
+);
+
+watch(
+  () => props.default,
+  (newDefault) => {
+    currentColor.value =
+      newDefault === "primary"
+        ? defaultColorsPrimary[props.variant || "none"]
+        : newDefault === "secondary"
+        ? defaultColorsSecondary[props.variant || "none"]
+        : undefined;
+
+    // initialColors.value = currentColor.value;
   },
   { immediate: true }
 );
@@ -47,24 +70,40 @@ function handleHover() {
 }
 
 function resetButton() {
-  currentColor.value = defaultColors[props.variant || "none"];
+  // currentColor.value = initialColors.value;
+  currentColor.value =
+    props.default === "primary"
+      ? defaultColorsPrimary[props.variant] || "none"
+      : props.default === "secondary"
+      ? defaultColorsSecondary[props.variant] || "none"
+      : undefined;
   noneHoverBackground.value = "transparent";
 }
 
 const buttonStyles = computed(() => {
   return {
     background:
-      props.variant === "fill"
+      props.default !== "primary" && props.default !== "secondary"
+        ? undefined
+        : props.variant === "fill"
         ? currentColor.value
         : props.variant === "none"
         ? noneHoverBackground.value
         : "transparent",
     border:
-      props.variant === "border" ? `2px solid ${currentColor.value}` : "none",
-    color:
-      props.variant === "none"
-        ? currentColor.value
+      props.default !== "primary" && props.default !== "secondary"
+        ? undefined
         : props.variant === "border"
+        ? `2px solid ${currentColor.value}`
+        : "none",
+    color:
+      props.default !== "primary" && props.default !== "secondary"
+        ? undefined
+        : props.default === "secondary" && props.variant === "border"
+        ? "var(--button-secondary-border-fg)"
+        : props.variant === "none"
+        ? currentColor.value
+        : props.variant === "border" && props.default === "primary"
         ? "var(--button-primary-border-fg)"
         : props.variant === "fill"
         ? "var(--button-fg)"
@@ -83,7 +122,7 @@ function handleClick(event: MouseEvent) {
 
 <template>
   <button
-    :class="[`${type}`, `alternate.${variant}`]"
+    :class="[`${type}`, `${variant}`]"
     :style="buttonStyles"
     @mouseenter="handleHover"
     @mouseleave="resetButton"
