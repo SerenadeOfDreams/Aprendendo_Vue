@@ -26,11 +26,23 @@ const isImagem = (
 
 <template>
   <div class="custom-card-container">
-    <Card :class="{ 'p-card-com-padding': descricaoCard.tipo === 'texto' }">
+    <Card
+      :style="
+        descricaoCard.tipo === 'imagem'
+          ? [
+              'p-card-caption',
+              { 'padding-top': '25px' },
+              'p-card-content',
+              { width: 'fit-content' },
+            ]
+          : descricaoCard.tipo === 'texto'
+          ? { '--p-card-body-padding': '25px' }
+          : {}
+      "
+    >
+      <!-- <Card> -->
       <template #title>
-        <div :class="{ 'p-card-caption': descricaoCard.tipo === 'imagem' }">
-          {{ tituloCard ?? "Card" }}
-        </div>
+        {{ tituloCard ?? "Card" }}
       </template>
       <template #content>
         <template v-if="isTexto(props.descricaoCard)">
@@ -50,17 +62,13 @@ const isImagem = (
   flex-direction: column;
   flex-wrap: wrap;
   width: 300px;
-  height: 232.33px;
+  height: 300px;
 }
 .p-card {
-  border: 1px solid black;
+  border: 1px solid var(--border);
   --p-card-border-radius: 8px;
   width: 100%;
   height: 100%;
-}
-
-.p-card-com-padding {
-  padding: 25px;
 }
 
 ::v-deep(.p-card-body) {
@@ -69,29 +77,31 @@ const isImagem = (
 }
 
 .p-card-caption {
-  padding: 25px 0px 0px 0px;
+  height: 10%;
 }
 
 ::v-deep(.p-card-title) {
-  height: 50%;
+  height: 70%;
   text-align: center;
-  --p-card-title-font-size: 16px;
+  --p-card-title-font-size: 22px;
 }
 
 ::v-deep(.p-card-content) {
   word-wrap: break-word;
   overflow-wrap: break-word;
+  overflow: hidden;
   word-break: break-all;
   white-space: normal;
-  height: 100%;
-  width: 100%;
-  font-size: 14px;
+  height: 90%;
+  font-size: 20px;
 }
 
 .card-image {
-  max-width: 100%;
-  max-height: 150px;
-  object-fit: cover;
-  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 300px;
+  max-height: 241.5px;
+  border-radius: 0px 0px 7.5px 7.5px;
 }
 </style>
