@@ -28,21 +28,32 @@ const isImagem = (
   <div class="custom-card-container">
     <Card
       :style="
-        descricaoCard.tipo === 'imagem'
+        descricaoCard.tipo === 'texto'
           ? [
-              'p-card-caption',
-              { 'padding-top': '25px' },
               'p-card-content',
-              { width: 'fit-content' },
+              {
+                'word-wrap': 'break-word',
+                'overflow-wrap': 'break-word',
+                'word-break': 'break-all',
+                'white-space': 'normal',
+                'font-size': '20px',
+              },
+              'p-card-body',
+              { '--p-card-body-padding': '25px' },
             ]
-          : descricaoCard.tipo === 'texto'
-          ? { '--p-card-body-padding': '25px' }
           : {}
       "
     >
-      <!-- <Card> -->
       <template #title>
-        {{ tituloCard ?? "Card" }}
+        <div
+          :style="
+            descricaoCard.tipo === 'imagem'
+              ? ['p-card-caption', { 'padding-top': '25px' }]
+              : []
+          "
+        >
+          {{ tituloCard ?? "Card" }}
+        </div>
       </template>
       <template #content>
         <template v-if="isTexto(props.descricaoCard)">
@@ -61,47 +72,35 @@ const isImagem = (
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 300px;
-  height: 300px;
 }
 .p-card {
-  border: 1px solid var(--border);
+  border: 3px solid var(--border);
+  overflow: hidden;
   --p-card-border-radius: 8px;
-  width: 100%;
-  height: 100%;
 }
 
 ::v-deep(.p-card-body) {
+  width: 300px;
+  height: 300px;
   --p-card-body-gap: 10px;
   align-items: center;
 }
 
-.p-card-caption {
-  height: 10%;
-}
-
 ::v-deep(.p-card-title) {
-  height: 70%;
   text-align: center;
   --p-card-title-font-size: 22px;
 }
 
 ::v-deep(.p-card-content) {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  width: 100%;
+  border-top: 3px solid var(--border);
   overflow: hidden;
-  word-break: break-all;
-  white-space: normal;
-  height: 90%;
-  font-size: 20px;
 }
 
 .card-image {
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  width: 300px;
-  max-height: 241.5px;
-  border-radius: 0px 0px 7.5px 7.5px;
+  width: 100%;
+  height: 100%;
 }
 </style>
