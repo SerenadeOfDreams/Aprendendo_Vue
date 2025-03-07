@@ -23,6 +23,8 @@
   --border2: var(--border-light2);
   --border3: var(--border-light3);
   --border4: var(--border-light4);
+  --border5: var(--border-light5);
+  --border6: var(--border-light6);
 
   /* ----------------------------- */
 
@@ -40,7 +42,9 @@
   --border-light2: #00e5ff;
   --border-light3: #3dffa3;
   --border-light4: #fbff00;
-  --teste: #12d9ef;
+  --border-light5: #413dff;
+  --border-light6: #ff3d99;
+  /* --teste: #12d9ef; */
   /* --border-light: #e0e0e0; */
   --button-primary-fill-light-theme: #ff3d99;
   --button-primary-fill-light-theme-hover: #f565a8;

@@ -30,7 +30,7 @@ import HeaderBar from "../components/HeaderBar.vue";
 .content-view {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 3px solid var(--border6);
   border-radius: 3px;
   width: auto;
   height: 100%;
