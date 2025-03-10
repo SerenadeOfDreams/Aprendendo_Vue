@@ -77,6 +77,9 @@ const isImagem = (
   border: 3px solid var(--border);
   overflow: hidden;
   --p-card-border-radius: 8px;
+  --p-card-color: var(--fg-primary);
+  transition-property: var(--p-card-color);
+  transition-duration: var(--theme-transition-time);
 }
 
 ::v-deep(.p-card-body) {
