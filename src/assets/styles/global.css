@@ -127,6 +127,18 @@
   --message-warn-simple-color: #ca8a04;
   --message-error-simple-color: #dc2626;
   --message-secondary-simple-color: #64748b;
+  /* -------------------------------------------------- */
+  /* ----------------------------------------------------- */
+
+  /* ESQUEMA DE CORES DO SPOTIFY */
+  --spotify-green: #1ed760;
+  --spotify-black: black;
+  --spotify-white: white;
+  --spotify-blackNwhite: var(--spotify-black);
+  --spotify-green-icon: url("/Spotify Icons/Primary_Logo_Green_RGB.svg");
+  --spotify-black-icon: url("Spotify Icons/Primary_Logo_Black_RGB.svg");
+  --spotify-white-icon: url("Spotify Icons/Primary_Logo_White_RGB.svg");
+  --spotify-blackNwhite-icon: var(--spotify-black-icon);
 }
 
 .modo-escuro {
@@ -144,6 +156,7 @@
   --button-custom-hover: var(--button-custom-dark-theme-hover);
   --button-success-padrao: var(--button-success);
   --button-danger-hover2: var(--button-danger-hover2-dark);
+  --spotify-blackNwhite-icon: var(--spotify-white-icon);
 }
 
 a {
