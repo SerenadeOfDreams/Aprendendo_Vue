@@ -139,6 +139,10 @@
   --spotify-black-icon: url("/public/SpotifyIcons/Primary_Logo_Black_RGB.svg");
   --spotify-white-icon: url("/public/SpotifyIcons/Primary_Logo_White_RGB.svg");
   --spotify-blackNwhite-icon: var(--spotify-black-icon);
+  /* ------------------------------------------------------------------------------- */
+
+  /* ESQUEMA DE CORES DO INSTAGRAM */
+  --instagram-blackNwhite: black;
 }
 
 .modo-escuro {
@@ -157,6 +161,7 @@
   --button-success-padrao: var(--button-success);
   --button-danger-hover2: var(--button-danger-hover2-dark);
   --spotify-blackNwhite-icon: var(--spotify-white-icon);
+  --instagram-blackNwhite: white;
 }
 
 a {
