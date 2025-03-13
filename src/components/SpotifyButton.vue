@@ -22,17 +22,19 @@ const currentIcon = computed(() => {
 
 <style scoped>
 .spotify-button-container {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
+  outline: none;
   border-radius: 8px;
   background: none;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
-/* .spotify-button-container:hover {
-  color: #1ed760;
-} */
+.spotify-button-container:hover {
+  --spotify-blackNwhite-icon: var(--spotify-green-icon);
+}
 </style>
