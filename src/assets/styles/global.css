@@ -135,9 +135,9 @@
   --spotify-black: black;
   --spotify-white: white;
   --spotify-blackNwhite: var(--spotify-black);
-  --spotify-green-icon: url("/Spotify Icons/Primary_Logo_Green_RGB.svg");
-  --spotify-black-icon: url("Spotify Icons/Primary_Logo_Black_RGB.svg");
-  --spotify-white-icon: url("Spotify Icons/Primary_Logo_White_RGB.svg");
+  --spotify-green-icon: url("/public/SpotifyIcons/Primary_Logo_Green_RGB.svg");
+  --spotify-black-icon: url("/public/SpotifyIcons/Primary_Logo_Black_RGB.svg");
+  --spotify-white-icon: url("/public/SpotifyIcons/Primary_Logo_White_RGB.svg");
   --spotify-blackNwhite-icon: var(--spotify-black-icon);
 }
 
