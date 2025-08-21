@@ -70,7 +70,7 @@ function carregaModoEscuro() {
 .content-view {
   display: flex;
   flex-direction: column;
-  border: 3px solid var(--border6);
+  border: 1px solid var(--border6);
   border-radius: 3px;
   width: auto;
   height: 100%;
