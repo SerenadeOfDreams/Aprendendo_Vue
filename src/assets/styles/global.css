@@ -192,8 +192,8 @@ button:focus-visible {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 15px;
+  height: 15px;
 }
 
 ::-webkit-scrollbar-track {
@@ -201,7 +201,9 @@ button:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--fg-highlight-1);
+  background: var(--fg-highlight-1);
+  border: 5px solid var(--bg-primary);
+  transition: border 0.5s ease;
   border-radius: 10px;
 }
 
